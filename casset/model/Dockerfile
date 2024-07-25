@@ -8,8 +8,7 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Install the required Python packages
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install --upgrade pip && pip install -r requirements.txt
 
 # Copy the rest of the application code into the container
 COPY . .
@@ -17,5 +16,5 @@ COPY . .
 # Expose the port that your Flask app listens on
 EXPOSE 5000
 
-# Start the Flask app
-CMD ["python", "app.py"]
+# Run Gunicorn to serve the app
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "app:app"]
