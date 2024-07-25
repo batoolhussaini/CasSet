@@ -1,2 +1,21 @@
-buildCommand: npm run build
-publishDir: build
+services:
+  - type: web
+    name: CasSet
+    env: python
+    region: us-central
+    buildCommand: |
+      cd casset
+      npm install
+      npm run build
+    startCommand: |
+      cd casset/model
+      gunicorn -b 0.0.0.0:5000 app:app
+    publishDir: casset/build
+    healthCheckPath: /
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: CONNECTION_STRING
+        value: "mongodb+srv://noramellik0:nwFjr39WeSfR2eYR@cluster0.sjmnwkz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
