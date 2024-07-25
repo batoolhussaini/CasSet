@@ -32,7 +32,7 @@ import c10 from '../media/casset_options/c10.png';
 function MainSite() {
     const CLIENT_ID = "21fea0db3247431798d002572894627c";
     const CLIENT_SECRET = "f83046b5b266477d8cda691fad9be448"; 
-    const REDIRECT_URL_AFTER_LOGIN = "http://localhost:3000/casset";
+    const REDIRECT_URL_AFTER_LOGIN = "https://casset-tq1k.onrender.com/casset";
     const [showCreatePlaylist, setShowCreatePlaylist] = useState(false);
     const [showUploadPlaylist, setShowUploadPlaylist] = useState(false); 
     const [profile, setProfile] = useState(null);
@@ -252,7 +252,7 @@ function MainSite() {
             <div id="everything-box">
                 <div id="left-side">
                     <div id="top-box">
-                      <a href="http://localhost:3000/casset">
+                      <a href="https://casset-tq1k.onrender.com/casset">
                         <img src={titleSrc} alt="CASSET" id="title" />
                       </a>
                         {/* When the button is clicked, toggle the state to show/hide the create playlist form */}
@@ -343,7 +343,7 @@ function MainSite() {
                     <div id="friends-box" className="scrollable">
                       <div id="friends-top">
                         <p className="russo-one-regular" id="friends">friends</p>
-                        <a href="http://localhost:3000/casset">
+                        <a href="https://casset-tq1k.onrender.com/casset">
                           <img src={logoSrc} alt="logo" id="logo"/>
                         </a>
                       </div>
@@ -352,7 +352,7 @@ function MainSite() {
                 </div>
             </div>
             <footer>
-              <a href="http://localhost:3000/casset">
+              <a href="https://casset-tq1k.onrender.com/casset">
                 <img src={iconSrc} alt="icon" style={{maxWidth: "32px"}}/>
               </a>
               &emsp;© 2024 CasSet&emsp;About&emsp;Privacy Policy&emsp;Contact

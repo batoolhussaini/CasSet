@@ -37,7 +37,7 @@ export default function Home() {
         </div>
       </div>
       <footer>
-        <a href="http://localhost:3000">
+        <a href="https://casset-tq1k.onrender.com">
           <img src={logoSrc} alt="logo" style={{maxWidth: "50px"}}/>
         </a>
         &emsp;© 2024 CasSet&emsp;About&emsp;Privacy Policy&emsp;Contact
