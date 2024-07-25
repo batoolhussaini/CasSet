@@ -21,7 +21,8 @@
 }
 
 .rectangle-image {
-  width: 100%;
+  width: 65vw;
+  /* width: 100%; */
   height: auto;
 }
 
