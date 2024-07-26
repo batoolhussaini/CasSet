@@ -22,7 +22,7 @@ COPY casset/package.json casset/package-lock.json ./
 
 RUN npm install
 
-COPY casset .
+COPY ../casset .
 
 RUN npm run build
 
