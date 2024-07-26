@@ -7,9 +7,6 @@ services:
       cd casset
       npm install
       npm run build
-    startCommand: |
-      cd casset/model
-      gunicorn -b 0.0.0.0:5000 app:app
     healthCheckPath: /
     plan: free
     autoDeploy: true
