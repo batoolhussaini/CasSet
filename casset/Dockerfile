@@ -1,4 +1,4 @@
-# PART 1: Build the backend (official Python image as the base image for the backend)
+#PART 1: Build the backend (official Python image as the base image for the backend)
 FROM python:3.10-slim AS backend
 # working directory for the backend
 WORKDIR /app
@@ -9,7 +9,7 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 # copy backend source code into the container
 COPY model .
 
-# PART 2: Build the frontend
+#PART 2: Build the frontend
 FROM node:14 AS frontend
 # working directory for the frontend
 WORKDIR /app/casset
@@ -23,7 +23,7 @@ COPY public ./public
 # build 
 RUN npm run build
 
-# PART 3: Combining backend and frontend
+#PART 3: Combining backend and frontend
 FROM python:3.10-slim
 # working directory for the final image
 WORKDIR /app
