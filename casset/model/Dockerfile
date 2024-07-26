@@ -26,7 +26,7 @@ COPY casset/package.json casset/package-lock.json ./
 RUN npm install
 
 # Copy the frontend source code into the container
-COPY casset/src ../casset/src
+COPY ../src ./src
 
 # Build the frontend
 RUN npm run build
