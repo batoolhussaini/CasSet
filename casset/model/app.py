@@ -10,7 +10,7 @@ from friends import friends_bp
 import os
 
 # Define the path to the build directory
-BUILD_DIR = os.path.join(os.path.dirname(__file__), 'static')
+BUILD_DIR = os.path.join(os.path.dirname(__file__), 'build')
 
 app = Flask(__name__, static_folder=BUILD_DIR)
 CORS(app)

@@ -42,7 +42,7 @@ WORKDIR /app
 COPY --from=backend /app /app
 
 # Copy the frontend build from the frontend build stage
-COPY --from=frontend /app/casset/build /app/static
+COPY --from=frontend /app/casset/build /app/build
 
 # Install the required Python packages in the final image
 RUN pip install --upgrade pip && pip install -r requirements.txt
