@@ -10,7 +10,6 @@ services:
     startCommand: |
       cd casset/model
       gunicorn -b 0.0.0.0:5000 app:app
-    publishDir: casset/build
     healthCheckPath: /
     plan: free
     autoDeploy: true
