@@ -4,12 +4,9 @@ services:
     env: python
     region: us-central
     buildCommand: |
-      cd casset
-      npm install
-      npm run build
+      echo "Building"
     startCommand: |
-      cd casset/model
-      ./start.sh
+      echo "Starting"
     healthCheckPath: /
     plan: free
     autoDeploy: true
