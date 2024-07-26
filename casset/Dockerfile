@@ -5,13 +5,13 @@ FROM python:3.10-slim AS backend
 WORKDIR /app
 
 # Copy the requirements file into the container
-COPY requirements.txt .
+COPY model/requirements.txt .
 
 # Install the required Python packages
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
 # Copy the backend source code into the container
-COPY . .
+COPY model .
 
 # Build the frontend
 FROM node:14 AS frontend
@@ -20,13 +20,14 @@ FROM node:14 AS frontend
 WORKDIR /app/casset
 
 # Copy package.json and package-lock.json into the container
-COPY casset/package.json casset/package-lock.json ./
+COPY package.json package-lock.json ./
 
 # Install Node.js dependencies
 RUN npm install
 
 # Copy the frontend source code into the container
-COPY ../src ./src
+COPY src ./src
+COPY public ./public
 
 # Build the frontend
 RUN npm run build
