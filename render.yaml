@@ -7,6 +7,9 @@ services:
       cd casset
       npm install
       npm run build
+    startCommand: |
+      cd casset/model
+      ./start.sh
     healthCheckPath: /
     plan: free
     autoDeploy: true
