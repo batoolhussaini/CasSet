@@ -1,7 +1,7 @@
 // async function that deletes playlist in db
 
 export async function deletePlaylist(playlistID){
-    fetch('http://localhost:5000/playlist/deletePlaylist', {
+    fetch('https://casset-tq1k.onrender.com/playlist/deletePlaylist', {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
@@ -21,7 +21,7 @@ export async function deletePlaylist(playlistID){
 }
 
 export async function fetchPostPlaylist(playlistData, callback){
-    fetch('http://localhost:5000/playlist/postNewPlaylist', {
+    fetch('https://casset-tq1k.onrender.com/playlist/postNewPlaylist', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -40,7 +40,7 @@ export async function fetchPostPlaylist(playlistData, callback){
 export async function fetchCasset(playlistID){
     try {
     
-        const response = await fetch('http://localhost:5000/playlist/fetchPlaylistDocument', {
+        const response = await fetch('https://casset-tq1k.onrender.com/playlist/fetchPlaylistDocument', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ export const fetchPlaylists = async () => {
     try {
         const profileInfo = JSON.parse(localStorage.getItem('profile'));
         console.log(profileInfo);
-        const response = await fetch('http://localhost:5000/playlist/fetchMultiPlaylistDocuments', {
+        const response = await fetch('https://casset-tq1k.onrender.com/playlist/fetchMultiPlaylistDocuments', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ export const fetchSharedPlaylists = async () => {
     try {
         const profileInfo = JSON.parse(localStorage.getItem('profile'));
         console.log(profileInfo);
-        const response = await fetch('http://localhost:5000/playlist/getSharedPlaylists', {
+        const response = await fetch('https://casset-tq1k.onrender.com/playlist/getSharedPlaylists', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -106,7 +106,7 @@ export const fetchSharedPlaylists = async () => {
 }
 
 export async function postSharedPlaylist(playlistID){
-    fetch('http://localhost:5000/playlist/postSharedPlaylist', {
+    fetch('https://casset-tq1k.onrender.com/playlist/postSharedPlaylist', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

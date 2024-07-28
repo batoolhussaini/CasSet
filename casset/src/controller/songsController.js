@@ -1,7 +1,7 @@
 // async function to delete multiple songs in a playlist
 
 export async function deleteSongs(playlistID){
-    fetch('http://localhost:5000/songs/deleteMultipleSongs', {
+    fetch('https://casset-tq1k.onrender.com/songs/deleteMultipleSongs', {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
@@ -21,7 +21,7 @@ export async function deleteSongs(playlistID){
 }
 
 export async function fetchPostMultiSongs(songsDocs){
-    fetch('http://localhost:5000/songs/postMultipleSongs', {
+    fetch('https://casset-tq1k.onrender.com/songs/postMultipleSongs', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -43,7 +43,7 @@ export async function fetchPostMultiSongs(songsDocs){
 export async function fetchGetMultiSongs(playlistID){
     try {
     
-        const response = await fetch('http://localhost:5000/songs/getMultiSongs', {
+        const response = await fetch('https://casset-tq1k.onrender.com/songs/getMultiSongs', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ export async function fetchGetMultiSongs(playlistID){
 export async function editSongNote(songID, playlistID, new_note){
     try {
     
-        const response = await fetch('http://localhost:5000/songs/editNote', {
+        const response = await fetch('https://casset-tq1k.onrender.com/songs/editNote', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

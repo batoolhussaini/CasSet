@@ -1,7 +1,7 @@
 // CONTROLLER FILES FOR ALL DATABASE INTERACTIONS FOR FRIENDS 
 
 export async function addSharedCasset(user_name, user_email, friend_name, sharedPlaylistID){
-    fetch('http://localhost:5000/friends/addNewSharedCasset', {
+    fetch('https://casset-tq1k.onrender.com/friends/addNewSharedCasset', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -25,7 +25,7 @@ export async function addSharedCasset(user_name, user_email, friend_name, shared
 }
 
 export async function removeFriend(friend_name, user_name, user_email){
-    fetch('http://localhost:5000/friends/removeFriend', {
+    fetch('https://casset-tq1k.onrender.com/friends/removeFriend', {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
@@ -48,7 +48,7 @@ export const fetchAddedFriends = async () => {
     try {
         const profileInfo = JSON.parse(localStorage.getItem('profile'));
         console.log(profileInfo);
-        const response = await fetch('http://localhost:5000/friends/findAddedFriends', {
+        const response = await fetch('https://casset-tq1k.onrender.com/friends/findAddedFriends', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ export const fetchAddedFriends = async () => {
 }
 
 export async function addNewFriend(newFriendName, user_name, user_email){
-    fetch('http://localhost:5000/friends/addFriend', {
+    fetch('https://casset-tq1k.onrender.com/friends/addFriend', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

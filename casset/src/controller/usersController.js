@@ -1,6 +1,6 @@
 export const fetchUsers = async (requestFriendEmail) => {
     try {
-        const response = await fetch('http://localhost:5000/users/searchUsers', {
+        const response = await fetch('https://casset-tq1k.onrender.com/users/searchUsers', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
