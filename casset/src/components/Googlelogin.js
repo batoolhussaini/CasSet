@@ -45,7 +45,7 @@ function GoogleSignInAuthorization() {
                         "name": res.data.name,
                         "email":res.data.email,
                     };
-                    fetch('http://localhost:5000/users/postUserInfo', {
+                    fetch('https://casset-tq1k.onrender.com/users/postUserInfo', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
