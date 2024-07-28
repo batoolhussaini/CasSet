@@ -30,7 +30,11 @@ def serve():
 # Serve other static files
 @app.route('/<path:path>')
 def static_files(path):
-    return send_from_directory(app.static_folder, path)
+    file_path = os.path.join(app.static_folder, path)
+    if os.path.exists(file_path):
+        return send_from_directory(app.static_folder, path)
+    else:
+        return send_from_directory(app.static_folder, 'index.html')
 
 # if __name__ == '__main__':
 #     app.run(debug=True, port=5000)
